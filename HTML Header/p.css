@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif
+}
+
+body{
+    min-height: 100vh;
+    background: #252839;
+    transition: ease-in 0.5s;
+} 
+
+/* Header Dark */
+
+header{
+    background-color: #1d1f2b;
+    color: rgb(60, 184, 255);
+    height: 90px;
+    filter: drop-shadow(0 0 10px #0e0e0f);
+}
+
+/* Logo Dark */
+
+.header-logo h1{
+    filter: drop-shadow(0 0 20px #2303b4);
+    font-size: 40px;
+}
+
+.header-logo {
+    float: left;
+    padding: 10px 40px;
+    color: rgb(30, 229, 255);
+    filter: drop-shadow(0 0 30px #ff09f3);
+}
+
+/* Navigation Dark*/
+
+.header-nav li a{
+    background: #252839;
+    float: left;
+    padding: 20px 20px;
+    transition: 1s;
+}
+
+.header-nav li a:hover{
+    background: #31333d;
+    padding: 25px 20px;
+}
+
+ul{
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+
+ul li{
+    position: relative;
+    list-style: none;
+}
+
+ul li a{
+    position: relative;
+    font-size: 50px;
+    text-decoration: none;
+    line-height: 1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(225,225,225,0.5);
+
+}
+
+ul li a::before{
+    content: attr(data-text);
+    position: absolute;
+    color: var(--clr);
+    height: 0;
+    overflow: hidden;
+    border-right: 3px solid var(--clr);
+    -webkit-text-stroke: 3px var(--clr);
+
+}
+
+ul li a:hover::before{
+    transition: 1s;
+    height: 100%;
+    filter: drop-shadow(0 0 25px var(--clr));
+}
+
+ul li a:active::before{
+    transition: 0;
+    height: 0%;
+}
+
+/* Light Mode */
+
+body.light{
+    min-height: 100vh;
+    background: #bbc3ec;
+    transition: ease-in 0.5s;
+} 
+
+/* ===========Body=========== */
+
+/* Set-Theme */
+
+.set-theme h1{
+    float: left;
+    padding: 20px 10px;
+    font-size: 20px;
+    color: rgb(45, 152, 214);
+    filter: drop-shadow(0 0 20px #2303b4);  
+}
+
+.set-theme button{
+    margin-top: 15px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 12%;
+    border: none;
+}
+
+.set-theme button.dark-mode{
+    display: none;
+}
+
+.set-theme button.light-mode{
+    background-color: #36407e;
+    color: rgb(32, 188, 209);
+    transition: ease 0.5s;
+}
+
+.set-theme button.light-mode:hover{
+    padding: 12px;
+    background-color: #676d96;
+    color: rgb(113, 213, 226);
+    transition: ease 0.5s;
+}
